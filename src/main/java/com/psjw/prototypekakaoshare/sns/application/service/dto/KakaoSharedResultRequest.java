@@ -1,4 +1,4 @@
-package com.psjw.prototypekakaoshare.sns.kakao.dto;
+package com.psjw.prototypekakaoshare.sns.application.service.dto;
 
 
 import com.psjw.prototypekakaoshare.code.sns.KakaoChatType;
@@ -14,6 +14,7 @@ import java.util.Arrays;
 @Builder
 @Getter
 public class KakaoSharedResultRequest {
+    private String id;
     private String chatType;
     private String hashChatId;
     private String templateId;

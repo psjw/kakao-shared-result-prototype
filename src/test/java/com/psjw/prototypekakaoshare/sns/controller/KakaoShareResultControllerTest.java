@@ -1,8 +1,8 @@
-package com.psjw.prototypekakaoshare.controller;
+package com.psjw.prototypekakaoshare.sns.controller;
 
 import com.psjw.prototypekakaoshare.code.sns.KakaoChatType;
 import com.psjw.prototypekakaoshare.common.ApiCommonTest;
-import com.psjw.prototypekakaoshare.sns.kakao.dto.GenerateKakaoSharedResultRequest;
+import com.psjw.prototypekakaoshare.sns.application.service.dto.GenerateKakaoSharedResultRequest;
 import io.restassured.RestAssured;
 import io.restassured.response.ExtractableResponse;
 import io.restassured.response.Response;
@@ -24,7 +24,7 @@ class KakaoShareResultControllerTest extends ApiCommonTest {
                 .pathParam("path","shared")
                 .queryParams(GenerateKakaoSharedResultRequest.카카오공유하기_쿼리파라미터_생성(chatType))
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
-                .headers(GenerateKakaoSharedResultRequest.카카오공유하기_결과_요청헤더_생성(userAgent))
+                .headers(GenerateKakaoSharedResultRequest.카카오공유하기_결과_요청헤더_생성(""))
                 .body(GenerateKakaoSharedResultRequest
                         .채팅타입에따른_카카오공유하기_결과_요청값_생성(chatType))
                 .when()

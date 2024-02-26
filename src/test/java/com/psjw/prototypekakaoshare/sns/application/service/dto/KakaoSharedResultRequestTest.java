@@ -1,4 +1,4 @@
-package com.psjw.prototypekakaoshare.sns.kakao.dto;
+package com.psjw.prototypekakaoshare.sns.application.service.dto;
 
 import com.psjw.prototypekakaoshare.code.sns.KakaoChatType;
 import org.assertj.core.api.Assertions;

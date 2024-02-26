@@ -1,20 +1,21 @@
-package com.psjw.prototypekakaoshare.sns.kakao.dto;
+package com.psjw.prototypekakaoshare.sns.application.service.dto;
 
 import java.util.Map;
 
 public class GenerateKakaoSharedResultRequest {
-    private static String hashChatId = "1234";
-    private static String depositProductName = "통장";
-    private static String userId = "AAA1234";
-    private static String templateId = "55555";
+    private static String HASH_CHAT_ID = "1234";
+    private static String DEPOSIT_PRODUCT_NAME = "통장";
+    private static String USER_ID = "AAA1234";
+    private static String TEMPLATE_ID = "55555";
+    private static String ID = "1";
 
     public static KakaoSharedResultRequest 채팅타입에따른_카카오공유하기_결과_요청값_생성(String chatType) {
         return KakaoSharedResultRequest.builder()
                 .chatType(chatType)
-                .hashChatId(hashChatId)
-                .depositProductName(depositProductName)
-                .templateId(templateId)
-                .userId(userId)
+                .hashChatId(HASH_CHAT_ID)
+                .depositProductName(DEPOSIT_PRODUCT_NAME)
+                .templateId(TEMPLATE_ID)
+                .userId(USER_ID)
                 .build();
     }
 
@@ -29,10 +30,11 @@ public class GenerateKakaoSharedResultRequest {
     public static Map<String, String> 카카오공유하기_쿼리파라미터_생성(String chatType) {
         return Map.of(
                 "CHAT_TYPE", chatType,
-                "HASH_CHAT_ID", hashChatId,
-                "TEMPLATE_ID", templateId,
-                "USER_ID", userId,
-                "DEPOSIT_PRODUCT_NAME", depositProductName
+                "HASH_CHAT_ID", HASH_CHAT_ID,
+                "TEMPLATE_ID", TEMPLATE_ID,
+                "USER_ID", USER_ID,
+                "DEPOSIT_PRODUCT_NAME", DEPOSIT_PRODUCT_NAME,
+                "ID", ID
         );
     }
 }
