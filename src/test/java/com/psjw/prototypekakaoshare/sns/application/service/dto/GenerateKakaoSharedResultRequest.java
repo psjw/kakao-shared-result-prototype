@@ -9,13 +9,14 @@ public class GenerateKakaoSharedResultRequest {
     private static String TEMPLATE_ID = "55555";
     private static String ID = "1";
 
-    public static KakaoSharedResultRequest 채팅타입에따른_카카오공유하기_결과_요청값_생성(String chatType) {
-        return KakaoSharedResultRequest.builder()
+    public static KakaoSharedResultRequestDto 채팅타입에따른_카카오공유하기_결과_요청값_생성(String chatType) {
+        return KakaoSharedResultRequestDto.builder()
                 .chatType(chatType)
                 .hashChatId(HASH_CHAT_ID)
                 .depositProductName(DEPOSIT_PRODUCT_NAME)
                 .templateId(TEMPLATE_ID)
                 .userId(USER_ID)
+                .id(ID)
                 .build();
     }
 

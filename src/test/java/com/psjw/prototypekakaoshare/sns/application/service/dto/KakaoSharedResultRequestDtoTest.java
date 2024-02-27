@@ -6,9 +6,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class KakaoSharedResultRequestTest {
-    private KakaoSharedResultRequest successRequest;
-    private KakaoSharedResultRequest failRequest;
+class KakaoSharedResultRequestDtoTest {
+    private KakaoSharedResultRequestDto successRequest;
+    private KakaoSharedResultRequestDto failRequest;
     private String failChatType = "ABCD";
     private String successChatType = KakaoChatType.MemoChat.getChatType();
 
