@@ -15,9 +15,9 @@ class KakaoSharedResultRequestDtoTest {
     @BeforeEach
     void setUp(){
         successRequest = GenerateKakaoSharedResultRequest
-                                .채팅타입에따른_카카오공유하기_결과_요청값_생성(successChatType);
+                                .공유타입에따른_카카오공유하기_공유결과_요청값_생성(successChatType);
         failRequest = GenerateKakaoSharedResultRequest
-                                .채팅타입에따른_카카오공유하기_결과_요청값_생성(failChatType);
+                                .공유타입에따른_카카오공유하기_공유결과_요청값_생성(failChatType);
     }
 
 

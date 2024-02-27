@@ -9,7 +9,7 @@ public class GenerateKakaoSharedResultRequest {
     private static String TEMPLATE_ID = "55555";
     private static String ID = "1";
 
-    public static KakaoSharedResultRequestDto 채팅타입에따른_카카오공유하기_결과_요청값_생성(String chatType) {
+    public static KakaoSharedResultRequestDto 공유타입에따른_카카오공유하기_공유결과_요청값_생성(String chatType) {
         return KakaoSharedResultRequestDto.builder()
                 .chatType(chatType)
                 .hashChatId(HASH_CHAT_ID)
@@ -20,7 +20,7 @@ public class GenerateKakaoSharedResultRequest {
                 .build();
     }
 
-    public static Map<String, String> 카카오공유하기_결과_요청헤더_생성(String userAgent) {
+    public static Map<String, String> 카카오공유하기_공유결과_요청헤더_생성(String userAgent) {
         return Map.of(
                 "Authorization", "KakaoAK SERVICE_APP_ADMIN_KEY",
                 "X-Kakao-Resource-ID", "Rvy1c2dkzBAZ5hGD3rqYbxvr",
@@ -28,7 +28,7 @@ public class GenerateKakaoSharedResultRequest {
         );
     }
 
-    public static Map<String, String> 카카오공유하기_쿼리파라미터_생성(String chatType) {
+    public static Map<String, String> 카카오공유하기_공유결과_쿼리파라미터_생성(String chatType) {
         return Map.of(
                 "CHAT_TYPE", chatType,
                 "HASH_CHAT_ID", HASH_CHAT_ID,

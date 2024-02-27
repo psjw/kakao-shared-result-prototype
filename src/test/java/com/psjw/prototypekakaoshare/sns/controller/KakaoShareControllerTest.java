@@ -19,15 +19,15 @@ class KakaoShareControllerTest extends ApiCommonTest {
     public void 카카오공유하기_GET방식_성공_테스트(){
         String chatType = KakaoChatType.DirectChat.getChatType();
         String userAgent = "KakaoOpenAPI/1.0";
-        System.out.println(GenerateKakaoSharedResultRequest.카카오공유하기_쿼리파라미터_생성(chatType));
+        System.out.println(GenerateKakaoSharedResultRequest.카카오공유하기_공유결과_쿼리파라미터_생성(chatType));
         ExtractableResponse<Response> response = RestAssured.given()
                 .log().all()
                 .pathParam("path","shared")
-                .queryParams(GenerateKakaoSharedResultRequest.카카오공유하기_쿼리파라미터_생성(chatType))
+                .queryParams(GenerateKakaoSharedResultRequest.카카오공유하기_공유결과_쿼리파라미터_생성(chatType))
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
-                .headers(GenerateKakaoSharedResultRequest.카카오공유하기_결과_요청헤더_생성(userAgent))
+                .headers(GenerateKakaoSharedResultRequest.카카오공유하기_공유결과_요청헤더_생성(userAgent))
                 .body(GenerateKakaoSharedResultRequest
-                        .채팅타입에따른_카카오공유하기_결과_요청값_생성(chatType))
+                        .공유타입에따른_카카오공유하기_공유결과_요청값_생성(chatType))
                 .when()
                 .get(KAKAO_RESULT_SHARED_URL)
                 .then()

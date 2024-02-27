@@ -69,6 +69,4 @@ public class KakaoSharedController {
                 .readValue(objectMapper.writeValueAsString(map), clazz);
 
     }
-
-
 }
