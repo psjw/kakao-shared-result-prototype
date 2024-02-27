@@ -42,7 +42,6 @@ public class SnsSharedHistory {
         Assert.hasText(channelTypeCode,"채널 타입 코드가 올바르지 않습니다.");
         Assert.hasText(templateId,"템플릿 아이디가 올바르지 않습니다.");
         Assert.hasText(depositProductName,"상품명이 올바르지 않습니다.");
-        this.sharedId = sharedId;
         this.channelTypeCode = channelTypeCode;
         this.userId = userId;
         this.templateId = templateId;
