@@ -38,8 +38,6 @@ public class SnsSharedHistory {
     @Column(insertable = false)
     private LocalDateTime updateDate;
 
-
-
     private SnsSharedHistory(String channelTypeCode, String userId, String templateId, String depositProductName) {
         Assert.hasText(channelTypeCode,"채널 타입 코드가 올바르지 않습니다.");
         Assert.hasText(templateId,"템플릿 아이디가 올바르지 않습니다.");
