@@ -20,6 +20,14 @@ public class GenerateKakaoSharedResultRequest {
                 .build();
     }
 
+    public static KakaoSharedSaveResponseDto 카카오공유하기_공유저장_요청값_생성() {
+        return KakaoSharedSaveResponseDto.builder()
+                .depositProductName(DEPOSIT_PRODUCT_NAME)
+                .templateId(TEMPLATE_ID)
+                .userId(USER_ID)
+                .build();
+    }
+
     public static Map<String, String> 카카오공유하기_공유결과_요청헤더_생성(String userAgent) {
         return Map.of(
                 "Authorization", "KakaoAK SERVICE_APP_ADMIN_KEY",
@@ -36,6 +44,14 @@ public class GenerateKakaoSharedResultRequest {
                 "USER_ID", USER_ID,
                 "DEPOSIT_PRODUCT_NAME", DEPOSIT_PRODUCT_NAME,
                 "ID", ID
+        );
+    }
+
+    public static Map<String, String> 카카오공유하기_공유전_저장_파라미터_생성(String chatType) {
+        return Map.of(
+                "TEMPLATE_ID", TEMPLATE_ID,
+                "USER_ID", USER_ID,
+                "DEPOSIT_PRODUCT_NAME", DEPOSIT_PRODUCT_NAME
         );
     }
 }
